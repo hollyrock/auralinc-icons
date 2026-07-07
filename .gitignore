@@ -1,0 +1,8 @@
+*.png
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+
+# Manual working copies — not committed; build output goes to src/icons and dist/
+src/workspace/

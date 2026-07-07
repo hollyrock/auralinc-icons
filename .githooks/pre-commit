@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+if [ ! -d "src/workspace" ]; then
+  exit 0
+fi
+
+if ! ls src/workspace/*.svg >/dev/null 2>&1; then
+  exit 0
+fi
+
+if [ ! -d "node_modules" ]; then
+  echo "pre-commit: run 'npm install' before committing icons" >&2
+  exit 1
+fi
+
+echo "pre-commit: building icons from src/workspace..."
+python3 scripts/build_icons.py
+
+git add src/icons dist
+
+echo "pre-commit: staged src/icons and dist"

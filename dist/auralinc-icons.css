@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "auralinc-icons";
+    src: url(".//auralinc-icons.woff2?287ab217a26bfb47361b67f47336e7ad") format("woff2"),
+url(".//auralinc-icons.woff?287ab217a26bfb47361b67f47336e7ad") format("woff"),
+url(".//auralinc-icons.ttf?287ab217a26bfb47361b67f47336e7ad") format("truetype");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: auralinc-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-watermeron:before {
+    content: "\f101";
+}
+.icon-tomato:before {
+    content: "\f102";
+}
+.icon-sweet-pepper:before {
+    content: "\f103";
+}
+.icon-strowberry:before {
+    content: "\f104";
+}
+.icon-sprout:before {
+    content: "\f105";
+}
+.icon-spinach:before {
+    content: "\f106";
+}
+.icon-pumpkin:before {
+    content: "\f107";
+}
+.icon-potato:before {
+    content: "\f108";
+}
+.icon-peapod:before {
+    content: "\f109";
+}
+.icon-onion:before {
+    content: "\f10a";
+}
+.icon-mushroom:before {
+    content: "\f10b";
+}
+.icon-leaf:before {
+    content: "\f10c";
+}
+.icon-garic:before {
+    content: "\f10d";
+}
+.icon-eggplant:before {
+    content: "\f10e";
+}
+.icon-cucumber:before {
+    content: "\f10f";
+}
+.icon-coriander:before {
+    content: "\f110";
+}
+.icon-chili-pepper:before {
+    content: "\f111";
+}
+.icon-carrot:before {
+    content: "\f112";
+}
+.icon-broccoli:before {
+    content: "\f113";
+}
+.icon-blueberrie:before {
+    content: "\f114";
+}
+.icon-avocado:before {
+    content: "\f115";
+}
+.icon-apple:before {
+    content: "\f116";
+}
+.icon-apple-seed:before {
+    content: "\f117";
+}
