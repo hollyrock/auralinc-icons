@@ -17,6 +17,11 @@ if [ ! -d "node_modules" ]; then
   exit 1
 fi
 
+if ! python3 -c "import picosvg" >/dev/null 2>&1; then
+  echo "pre-commit: run 'pip install -r requirements.txt' before committing icons" >&2
+  exit 1
+fi
+
 echo "pre-commit: building icons from src/workspace..."
 python3 scripts/build_icons.py
 

@@ -31,6 +31,7 @@ scripts/
 ### One-time setup
 
 ```bash
+pip install -r requirements.txt
 npm install
 bash scripts/install-git-hooks.sh
 ```
@@ -49,7 +50,7 @@ python3 scripts/build_icons.py
 |------|----------------|
 | 1. Copy | Read each `src/workspace/*.svg` |
 | 2. Normalize | Resize to 64×64, center with 4 px padding |
-| 3. Outline | Convert strokes to filled paths (prevents lines disappearing in fonts) |
+| 3. Outline | Convert strokes to filled path outlines with [picosvg](https://github.com/googlefonts/picosvg) |
 | 4. Font | Generate icon font in `dist/` via [fantasticon](https://github.com/tancredi/fantasticon) |
 
 ### Icon font output (`dist/`)
@@ -123,7 +124,8 @@ bash scripts/install-git-hooks.sh
 - Node.js 18+ and npm
 
 ```bash
-npm install   # installs fantasticon, svg-outline-stroke
+pip install -r requirements.txt   # picosvg for stroke-to-path
+npm install                         # fantasticon for font generation
 ```
 
 ## What gets committed

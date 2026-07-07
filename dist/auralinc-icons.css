@@ -1,8 +1,8 @@
 @font-face {
     font-family: "auralinc-icons";
-    src: url(".//auralinc-icons.woff2?287ab217a26bfb47361b67f47336e7ad") format("woff2"),
-url(".//auralinc-icons.woff?287ab217a26bfb47361b67f47336e7ad") format("woff"),
-url(".//auralinc-icons.ttf?287ab217a26bfb47361b67f47336e7ad") format("truetype");
+    src: url(".//auralinc-icons.woff2?996baef0731220479f3fcb291cfa4cf6") format("woff2"),
+url(".//auralinc-icons.woff?996baef0731220479f3fcb291cfa4cf6") format("woff"),
+url(".//auralinc-icons.ttf?996baef0731220479f3fcb291cfa4cf6") format("truetype");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {

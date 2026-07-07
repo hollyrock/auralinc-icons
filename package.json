@@ -8,7 +8,6 @@
     "build:icons-only": "python3 scripts/build_icons.py --skip-font"
   },
   "devDependencies": {
-    "fantasticon": "^3.0.0",
-    "svg-outline-stroke": "^1.0.0"
+    "fantasticon": "^3.0.0"
   }
 }

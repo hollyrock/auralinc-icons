@@ -13,6 +13,7 @@ REPO_ROOT = SCRIPTS_DIR.parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 
 from lib.normalize import NormalizeOptions, normalize_svg
+from lib.stroke_to_path import strokes_to_paths
 DEFAULT_WORKSPACE = REPO_ROOT / "src" / "workspace"
 DEFAULT_ICONS = REPO_ROOT / "src" / "icons"
 DEFAULT_DIST = REPO_ROOT / "dist"
@@ -47,13 +48,14 @@ def sync_workspace_to_icons(
     processed: list[str] = []
     for source in workspace_files:
         normalized = normalize_svg(source.read_text(encoding="utf-8"), options)
+        outlined = strokes_to_paths(normalized)
         target = icons_dir / source.name
 
         if dry_run:
             print(f"[dry-run] would write {target.name}", flush=True)
         else:
-            target.write_text(normalized, encoding="utf-8")
-            print(f"normalized {target.name}", flush=True)
+            target.write_text(outlined, encoding="utf-8")
+            print(f"built {target.name}", flush=True)
 
         processed.append(source.stem)
 

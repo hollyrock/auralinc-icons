@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 /**
- * Convert stroked SVGs to filled paths and generate an icon font.
+ * Generate an icon font from prepared SVGs in src/icons/.
  *
- * Reads src/icons/*.svg, outlines strokes in place, then writes font assets to dist/.
- * Icon glyph names match SVG filenames without the .svg extension.
+ * Expects src/icons/*.svg to already be normalized (64x64) and converted to
+ * filled path outlines. Icon glyph names match SVG filenames without .svg.
  */
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createRequire } from "node:module";
 import { generateFonts } from "fantasticon";
-
-const require = createRequire(import.meta.url);
-const outlineStroke = require("svg-outline-stroke");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
@@ -22,20 +18,12 @@ const distDir = path.join(repoRoot, "dist");
 
 const FONT_NAME = "auralinc-icons";
 
-async function outlineIcons() {
+async function countIcons() {
   const entries = await fs.readdir(iconsDir);
-  const svgFiles = entries.filter((name) => name.endsWith(".svg")).sort();
+  const svgFiles = entries.filter((name) => name.endsWith(".svg"));
 
   if (svgFiles.length === 0) {
     throw new Error(`No SVG files found in ${iconsDir}`);
-  }
-
-  for (const fileName of svgFiles) {
-    const filePath = path.join(iconsDir, fileName);
-    const source = await fs.readFile(filePath, "utf8");
-    const outlined = await outlineStroke(source, { color: "#000000" });
-    await fs.writeFile(filePath, outlined, "utf8");
-    console.log(`outlined ${fileName}`);
   }
 
   return svgFiles.length;
@@ -57,7 +45,7 @@ async function buildFont() {
 }
 
 async function main() {
-  const count = await outlineIcons();
+  const count = await countIcons();
   await buildFont();
   console.log(`generated icon font for ${count} icon(s) in ${distDir}`);
 }
