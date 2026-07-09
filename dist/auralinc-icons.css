@@ -1,8 +1,8 @@
 @font-face {
     font-family: "auralinc-icons";
-    src: url(".//auralinc-icons.woff2?996baef0731220479f3fcb291cfa4cf6") format("woff2"),
-url(".//auralinc-icons.woff?996baef0731220479f3fcb291cfa4cf6") format("woff"),
-url(".//auralinc-icons.ttf?996baef0731220479f3fcb291cfa4cf6") format("truetype");
+    src: url(".//auralinc-icons.woff2?beaabd3e7a8f7f22dce9c7a1101e614c") format("woff2"),
+url(".//auralinc-icons.woff?beaabd3e7a8f7f22dce9c7a1101e614c") format("woff"),
+url(".//auralinc-icons.ttf?beaabd3e7a8f7f22dce9c7a1101e614c") format("truetype");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -16,72 +16,105 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-watermeron:before {
+.icon-yam:before {
     content: "\f101";
 }
-.icon-tomato:before {
+.icon-watermeron:before {
     content: "\f102";
 }
-.icon-sweet-pepper:before {
+.icon-tulip:before {
     content: "\f103";
 }
-.icon-strowberry:before {
+.icon-trillium:before {
     content: "\f104";
 }
-.icon-sprout:before {
+.icon-tomato:before {
     content: "\f105";
 }
-.icon-spinach:before {
+.icon-sweet-pepper:before {
     content: "\f106";
 }
-.icon-pumpkin:before {
+.icon-strowberry:before {
     content: "\f107";
 }
-.icon-potato:before {
+.icon-sprout:before {
     content: "\f108";
 }
-.icon-peapod:before {
+.icon-spinach:before {
     content: "\f109";
 }
-.icon-onion:before {
+.icon-shiitake:before {
     content: "\f10a";
 }
-.icon-mushroom:before {
+.icon-pumpkin:before {
     content: "\f10b";
 }
-.icon-leaf:before {
+.icon-potato:before {
     content: "\f10c";
 }
-.icon-garic:before {
+.icon-peapod:before {
     content: "\f10d";
 }
-.icon-eggplant:before {
+.icon-onion:before {
     content: "\f10e";
 }
-.icon-cucumber:before {
+.icon-mushroom:before {
     content: "\f10f";
 }
-.icon-coriander:before {
+.icon-meron:before {
     content: "\f110";
 }
-.icon-chili-pepper:before {
+.icon-maitake:before {
     content: "\f111";
 }
-.icon-carrot:before {
+.icon-lettuce:before {
     content: "\f112";
 }
-.icon-broccoli:before {
+.icon-leaf:before {
     content: "\f113";
 }
-.icon-blueberrie:before {
+.icon-garic:before {
     content: "\f114";
 }
-.icon-avocado:before {
+.icon-flower:before {
     content: "\f115";
 }
-.icon-apple:before {
+.icon-eggplant:before {
     content: "\f116";
 }
-.icon-apple-seed:before {
+.icon-daffodil:before {
     content: "\f117";
+}
+.icon-cucumber:before {
+    content: "\f118";
+}
+.icon-coriander:before {
+    content: "\f119";
+}
+.icon-chili-pepper:before {
+    content: "\f11a";
+}
+.icon-carrot:before {
+    content: "\f11b";
+}
+.icon-cabbage:before {
+    content: "\f11c";
+}
+.icon-broccoli:before {
+    content: "\f11d";
+}
+.icon-blueberrie:before {
+    content: "\f11e";
+}
+.icon-avocado:before {
+    content: "\f11f";
+}
+.icon-asparagus:before {
+    content: "\f120";
+}
+.icon-apple:before {
+    content: "\f121";
+}
+.icon-apple-seed:before {
+    content: "\f122";
 }
